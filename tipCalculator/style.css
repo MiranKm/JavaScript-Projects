@@ -14,7 +14,7 @@ body {
 .myheader {
     padding: 6px;
     color: white;
-    background: purple;
+    background: #2c3e50;
 }
 
 form {
@@ -23,16 +23,21 @@ form {
     margin: 1rem auto;
     width: 50%;
     padding: 1rem;
-    background: rebeccapurple;
+    background: #34495e;
     box-sizing: border-box;
 
 }
 
 form>span {
+    box-sizing: border-box;
     float: left;
+    width: 50%;
+    text-align: left;
+
 }
 
 form>input {
+    box-sizing: border-box;
     width: 50%;
     float: right;
 }
@@ -44,14 +49,17 @@ form::after {
 }
 
 button {
+    border-radius: 10px;
+
     color: white;
-    background: purple;
+    background: #34495e;
     padding: 0.5rem 1rem;
     border: none;
+    transition: ease-in-out 0.1s;
 }
 
 button:hover {
-    
+    box-shadow: 0 0 2px black;
 }
 
 @media only screen and (max-width:600px) {
