@@ -43,6 +43,17 @@ form::after {
     clear: both;
 }
 
+button {
+    color: white;
+    background: purple;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+button:hover {
+    
+}
+
 @media only screen and (max-width:600px) {
 
     form {
