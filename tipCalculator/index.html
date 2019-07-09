@@ -14,22 +14,22 @@
     <h1 class="myheader">Tip Calculator</h1>
     <form action="calculate" class="myform">
         <span>Bill amount </span>
-        <input type="text" name="inputs" placeholder="bill amount">
+        <input type="text" class="amount" name="inputs" placeholder="bill amount">
         <br>
 
-        <span>Percentage Tip</span>
-        <input type="text" name="inputs" placeholder="bill amount">
+        <span>Tip Percentage</span>
+        <input type="text" name="inputs" class="tip" placeholder="Tip Percentage">
         <br>
 
         <span>Tip amount</span>
-        <input type="text" name="inputs" placeholder="bill amount">
+        <input type="text" class="amountTip" disabled name="inputs" placeholder="bill amount">
         <br>
 
         <span>Total</span>
-        <h3>Display</h3>
+        <input type="text" class="total" disabled name="inputs" placeholder="Total">
 
     </form>
-    <button> Calculate</button>
+    <button class="calcBtn"> Calculate</button>
 
     <script src="app.js"></script>
 </body>
