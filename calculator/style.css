@@ -44,7 +44,7 @@ form {
 }
 
 input[type=display] {
-    background: lightpink;
+    background: #e904e9ee;
     color: #0f0f6d;
     width: 10%;
     margin: 10px;
@@ -65,7 +65,7 @@ input[type=display]:hover {
 }
 
 input[type=button] {
-    background: lightpink;
+    background: rgb(255, 173, 20);
     color: #0f0f6d;
     width: 10%;
     padding: 16px;
