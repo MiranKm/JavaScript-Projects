@@ -25,11 +25,20 @@ document.querySelector('.paste').addEventListener('click', function () {
 });
 
 
-textArea.addEventListener('change', function (e) {
-
+function passEvent(e) {
     const text = e.srcElement.value;
-    const textSplit= text.trim().split(' ');
+    seeResult(text)
+}
 
-    resultText.innerText ="Result: "+textSplit.length;
-    console.log(e.srcElement.value);
-})
+function seeResult(text) {
+    const textSplit = text.trim().split(' ');
+    resultText.innerText = "Result: " + textSplit.length;
+    console.log(textSplit.length);
+}
+
+textArea.addEventListener('change', passEvent)
+
+
+document.querySelector('.see').addEventListener('click', function () {
+    seeResult(textArea.value);
+});
