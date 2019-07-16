@@ -24,7 +24,6 @@ document.querySelector('.paste').addEventListener('click', function () {
     console.log(textArea.value);
 });
 
-
 function passEvent(e) {
     const text = e.srcElement.value;
     seeResult(text)
