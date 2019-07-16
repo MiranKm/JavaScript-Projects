@@ -1,5 +1,6 @@
 const textArea = document.getElementById('txt');
 const clearBtn = document.getElementById('clear');
+const resultText = document.getElementById('result');
 
 clearBtn.addEventListener('click', function () {
     console.log(textArea.value);
@@ -22,3 +23,13 @@ document.querySelector('.paste').addEventListener('click', function () {
     document.execCommand("paste");
     console.log(textArea.value);
 });
+
+
+textArea.addEventListener('change', function (e) {
+
+    const text = e.srcElement.value;
+    const textSplit= text.trim().split(' ');
+
+    resultText.innerText ="Result: "+textSplit.length;
+    console.log(e.srcElement.value);
+})
