@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ececec;
+    text-align: center;
+}
+
+.top-part {
+    height: 4rem;
+    background: rgb(0, 167, 0);
+    text-align: center;
+}
+
+.top-part>h2 {
+    text-transform: uppercase;
+    color: white;
+    line-height: 4rem;
+}
+
+.note-input,
+button {
+    padding: 1rem;
+
+}
+
+.note-input {
+    margin: 1rem;
+    width: 20%;
+    color: black;
+}
+
+button {
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.39);
+    background: rgb(0, 167, 0);
+    color: white;
+    border: none;
+    transition: ease-in-out 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.616);
+}
+
+.note-showcase{
+    margin: 0 auto;
+    width: 50%;
+}
+
+ul{
+    list-style: none;   
+}
+
+.item{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background: rgb(250, 128, 114); 
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(250, 128, 114, 0.596); 
+    margin: 1rem;
+}
+
+.item>p{
+    margin: auto 0;
+}
+span{
+    color: white;
+    margin-left: 1rem;
+    transition: ease-in-out 0.3s;
+    padding: 10px;
+    border-radius: 100%;
+    background: rgba(236, 236, 236, 0.1);
+}
+
+span:hover{
+    cursor: pointer;
+    padding: 10px;
+    background: #da0606;
+}
