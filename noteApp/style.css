@@ -29,6 +29,8 @@ button {
 .note-input {
     margin: 1rem;
     width: 20%;
+    border-radius: 2px;
+    border: 1px solid rgb(100, 100, 100);
     color: black;
 }
 
@@ -44,40 +46,32 @@ button:hover {
     box-shadow: 0 0 10px rgba(128, 128, 128, 0.616);
 }
 
-.note-showcase{
+.note-showcase {
     margin: 0 auto;
     width: 50%;
 }
 
-ul{
-    list-style: none;   
+ul {
+    list-style: none;
+
 }
 
-.item{
+li {
+    border: 1px solid gray;
+    transition: ease-in-out 0.3s;
+
+}
+
+li:hover>* {
+    visibility: visible;
+}
+
+
+.item {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    background: rgb(250, 128, 114); 
     align-items: center;
     padding: 1rem;
-    box-shadow: 0 0 20px rgba(250, 128, 114, 0.596); 
-    margin: 1rem;
-}
-
-.item>p{
-    margin: auto 0;
-}
-span{
-    color: white;
-    margin-left: 1rem;
-    transition: ease-in-out 0.3s;
-    padding: 10px;
-    border-radius: 100%;
-    background: rgba(236, 236, 236, 0.1);
-}
-
-span:hover{
-    cursor: pointer;
-    padding: 10px;
-    background: #da0606;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
+    margin-top: 1rem;
+    border-radius: 2px;
 }
