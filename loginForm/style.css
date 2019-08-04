@@ -10,7 +10,7 @@ button {
   border: none;
   border-radius: 4px;
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
-  margin: 4px;
+  margin: 4px auto;
   transition: ease-in-out 0.3s;
   width: 300px;
 
@@ -32,6 +32,10 @@ button:hover {
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
 }
 
+
+button {
+  color: white;
+}
 input:focus {
   outline-color: rgb(99, 99, 99);
   border-color: rgb(44, 44, 44);
@@ -41,29 +45,9 @@ input:focus {
 div {
   margin-top: 20%;
   text-align: center;
-  translate: (-50%, -50%)
+  translate: (-50%, -50%);
+
 }
-
-
-
-
-
-
-
-
-
-
-/* 
-@keyframes moveIn{
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-   */
-
 
 
 @keyframes fadeIn {
@@ -137,5 +121,9 @@ div {
 
 .fade-in {
   animation: fadeIn 1.0s ease forwards;
+}
 
+form{
+  display: flex;  
+  flex-direction: column;
 }
