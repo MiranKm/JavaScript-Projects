@@ -127,3 +127,8 @@ form{
   display: flex;  
   flex-direction: column;
 }
+
+.loggedIn{
+  margin-top: 10rem;
+  text-align: center;
+}
