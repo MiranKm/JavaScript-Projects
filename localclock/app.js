@@ -1,6 +1,19 @@
 const clockSelector = document.querySelector('.clock');
+const clockSelector2 = document.querySelector('.clock2');
 
-let hour,myHtml, minute, second, period, day;
+let hour, myHtml, minute, second, period, day;
+
+
+const daysArray = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+]
+
 
 setInterval(() => {
     const currentTime = new Date();
@@ -13,8 +26,16 @@ setInterval(() => {
         period = 'am';
     } else period = 'pm'
 
-     myHtml = `<p> ${day} ${hour}:${minute}:${second}:${period} </p>`;
+    myHtml = `<p> ${daysArray[day]} ${hour}:${minute}:${second}:${period}</p>`;
+    if (hour > 12) {
 
-    if (clockSelector)
+        myHtml2 = `<p> ${daysArray[day]} ${hour-12}:${minute}:${second}:${period}</p>`;
+    }
+
+    if (clockSelector) {
         clockSelector.innerHTML = myHtml;
+        clockSelector2.innerHTML = myHtml2;
+
+
+    }
 }, 1000);

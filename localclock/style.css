@@ -16,7 +16,7 @@
     font-size: 2rem;
 }
 
-.clock{
+.clock,.clock2{
     width: 100%;
     height:20rem;
     background: #eee;
@@ -24,8 +24,11 @@
     color: rgb(65, 0, 150);
 }
 
-.clock >p {
+.clock > p , .clock2 > p {
     font-size: 3rem;
     box-sizing: border-box;
     line-height: 20rem;
+}
+.clock2{
+    background: #fff;
 }
