@@ -68,10 +68,27 @@ li:hover>* {
 
 
 .item {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 1rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
     margin-top: 1rem;
     border-radius: 2px;
+}
+
+
+.deleteBtn{
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    font-size: 1rem;
+    color: white;
+    background: #444;
+    transition: ease-in-out 0.1s;
+}
+
+
+.deleteBtn:hover{
+    background: rgb(128, 128, 128);
 }
