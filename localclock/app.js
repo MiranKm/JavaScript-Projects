@@ -62,7 +62,4 @@ setInterval(() => {
         Math.round(Math.random(0)*colorsArray.length)
     ]);
     
-console.log(
-    clockSelector.children
-    );
 }, 1000);
