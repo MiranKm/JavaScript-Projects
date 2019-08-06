@@ -16,9 +16,16 @@ button {
 
 }
 
-body {
-  background-image: url("stock-photo-75319705.jpg");
-  background-position: center;
+body {  
+  
+  background: -moz-linear-gradient(135deg, #86868677 0, #3b8686 100%), url('stock-photo-75319705.jpg') no-repeat;
+  background: -webkit-gradient(135deg, #86868677 0, #3b8686 100%), url('stock-photo-75319705.jpg') no-repeat;
+  background: -webkit-linear-gradient(135deg, #86868677 0, #3b8686 100%), url('stock-photo-75319705.jpg') no-repeat;
+  background: -o-linear-gradient(135deg, #86868677 0, #3b8686 100%), url('stock-photo-75319705.jpg') no-repeat;
+  background: -ms-linear-gradient(135deg, #86868677 0, #3b8686 100%), url('stock-photo-75319705.jpg') no-repeat;
+  background: linear-gradient(135deg, #86868677 0, #3b868677 100%), url('stock-photo-75319705.jpg') no-repeat;
+  
+  background-position: center center;
   background-size: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -140,6 +147,8 @@ form {
 }
 
 .logo {
+  padding: 0 15px 0 15px;
+  background: #f0f0f0;
   width: 10%;
 }
 
