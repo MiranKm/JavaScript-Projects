@@ -1,7 +1,8 @@
 const clockSelector = document.querySelector('.clock');
 const clockSelector2 = document.querySelector('.clock2');
+const imageSlider = document.querySelector('.image-slider');
 
-let hour, myHtml,myHtml2, minute, second, period, day;
+let hour, myHtml, myHtml2, minute, second, period, day;
 
 
 const daysArray = [
@@ -50,7 +51,7 @@ setInterval(() => {
     myHtml = `<p> ${daysArray[day]} ${hour}:${minute}:${second}:${period}</p>`;
     if (hour > 12) {
         myHtml2 = `<p> ${daysArray[day]} ${hour-12}:${minute}:${second}:${period}</p>`;
-    }else{
+    } else {
         myHtml2 = `<p> ${daysArray[day]} ${hour-12}:${minute}:${second}:${period}</p>`;
     }
 
@@ -58,8 +59,12 @@ setInterval(() => {
         clockSelector.innerHTML = myHtml;
         clockSelector2.innerHTML = myHtml2;
     }
-    console.log(clockSelector.firstElementChild.style.backgroundColor=colorsArray[
-        Math.round(Math.random(0)*colorsArray.length)
-    ]);
-    
+    // console.log(clockSelector.firstElementChild.style.backgroundColor=colorsArray[
+    //     Math.round(Math.random(0)*colorsArray.length)
+    // ]);
+
+    // console.log(clockSelector2.firstElementChild.style.);
+    console.log(
+        imageSlider
+    );
 }, 1000);

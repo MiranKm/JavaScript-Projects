@@ -17,7 +17,11 @@ button {
 }
 
 body {
-  position: relative;
+  background-image: url("stock-photo-75319705.jpg");
+  background-position: center;
+  background-size: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .login {
@@ -36,6 +40,7 @@ button:hover {
 button {
   color: white;
 }
+
 input:focus {
   outline-color: rgb(99, 99, 99);
   border-color: rgb(44, 44, 44);
@@ -123,17 +128,25 @@ div {
   animation: fadeIn 1.0s ease forwards;
 }
 
-form{
-  display: flex;  
+form {
+  display: flex;
   flex-direction: column;
 }
 
-.loggedIn{
+.loggedIn {
   visibility: hidden;
   margin-top: 10rem;
   text-align: center;
 }
 
-.logo{
-  width: 15%;
+.logo {
+  width: 10%;
+}
+
+@media only screen and (max-width:600px) {
+
+  .logo {
+    width: 35%;
+  }
+
 }
