@@ -68,8 +68,10 @@ function deleteNoteFun(e) {
     const id = e.target.getAttribute('item-id')
     console.log(id);
 
-    if(e.target.matches('.deleteBtn')){
-
+    if (e.target.matches('.deleteBtn')) {
+        const li= e.target.parentElement
+        console.log(li);
+        noteShowCase.removeChild(li)
         note.deleteNote(id)
     }
 }
