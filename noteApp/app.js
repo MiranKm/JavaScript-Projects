@@ -2,6 +2,8 @@ const noteInput = document.querySelector('.note-input');
 const noteHolder = document.querySelector('.note-holder');
 const insertNoteBtn = document.querySelector('.insert-note');
 const noteDeleteBtn = document.querySelector('.deleteBtn');
+const noteShowCase = document.querySelector('.note-showcase');
+
 
 class Note {
     constructor() {
@@ -22,7 +24,7 @@ class Note {
     }
 
     deleteNote(id) {
-        const index = this.note.findIndex(indexes => index.id === id)
+        const index = this.note.findIndex(indexes => indexes.id === id)
         this.note.splice(index, 1)
     }
 }
@@ -33,8 +35,19 @@ const insertNote = note => {
 }
 
 const note = new Note()
-var shouldAbleToDelete = false;
 insertNoteBtn.addEventListener('click', e => {
+    addNote()
+
+})
+window.addEventListener("keydown", e => {
+    // console.log(e.keyCode);
+    if (e.key === "Enter" || e.keyCode === 13) {
+        addNote();
+    }
+})
+
+
+const addNote = () => {
     if (noteInput.value) {
         const newNote = {
             note: noteInput.value,
@@ -42,19 +55,21 @@ insertNoteBtn.addEventListener('click', e => {
         }
         note.addNote(newNote.note, newNote.id)
         insertNote(newNote)
-        shouldAbleToDelete = true;
 
         // console.log(note.note.length);
-
         noteInput.value = ""
-
     }
+}
 
-  
-})
-if (shouldAbleToDelete) {
-    noteDeleteBtn.addEventListener('click', event => {
-        console.log(event.srcElement);
-    })
- 
+noteShowCase.addEventListener('click', deleteNoteFun)
+
+function deleteNoteFun(e) {
+    // console.log(e.target.matches('.deleteBtn '));
+    const id = e.target.getAttribute('item-id')
+    console.log(id);
+
+    if(e.target.matches('.deleteBtn')){
+
+        note.deleteNote(id)
+    }
 }
