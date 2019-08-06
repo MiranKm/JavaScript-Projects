@@ -9,8 +9,6 @@ class Note {
     constructor() {
         this.note = []
     }
-
-
     addNote(note, id) {
         const noteItem = {
             note,
@@ -30,7 +28,7 @@ class Note {
 }
 
 const insertNote = note => {
-    const noteMock = `<li class="item" item-id="${note.id}">${note.note}  id-> ${note.id} <span class="deleteBtn">X</span></li>`
+    const noteMock = `<li class="item" item-id="${note.id}">${note.note}<span class="deleteBtn">X</span></li>`
     noteHolder.insertAdjacentHTML('afterend', noteMock)
 }
 
@@ -55,7 +53,6 @@ const addNote = () => {
         }
         note.addNote(newNote.note, newNote.id)
         insertNote(newNote)
-
         // console.log(note.note.length);
         noteInput.value = ""
     }
@@ -66,12 +63,12 @@ noteShowCase.addEventListener('click', deleteNoteFun)
 function deleteNoteFun(e) {
     // console.log(e.target.matches('.deleteBtn '));
     const id = e.target.getAttribute('item-id')
-    console.log(id);
-
     if (e.target.matches('.deleteBtn')) {
-        const li= e.target.parentElement
-        console.log(li);
-        noteShowCase.removeChild(li)
-        note.deleteNote(id)
+        if (confirm("are you sure wanna delete this?")) {
+            const li = e.target.parentElement
+            console.log(li);
+            noteShowCase.removeChild(li)
+            note.deleteNote(id)
+        }
     }
 }
