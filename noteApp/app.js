@@ -5,6 +5,7 @@ const noteDeleteBtn = document.querySelector('.deleteBtn');
 const noteShowCase = document.querySelector('.note-showcase');
 
 
+const state = {}
 class Note {
     constructor() {
         this.note = []
@@ -15,6 +16,9 @@ class Note {
             id
         }
         this.note.push(noteItem)
+        this.presistTheData()
+
+
     }
 
     getNotesLength() {
@@ -24,6 +28,15 @@ class Note {
     deleteNote(id) {
         const index = this.note.findIndex(indexes => indexes.id === id)
         this.note.splice(index, 1)
+        this.presistTheData()
+    }
+    presistTheData() {
+        localStorage.setItem("notes", JSON.stringify(this.note));
+    }
+
+    readPresistedData() {
+        const data = JSON.parse(localStorage.getItem("notes"))
+        if (data) this.note = data
     }
 }
 
@@ -32,11 +45,10 @@ const insertNote = note => {
     noteHolder.insertAdjacentHTML('afterend', noteMock)
 }
 
-const note = new Note()
 insertNoteBtn.addEventListener('click', e => {
     addNote()
-
 })
+
 window.addEventListener("keydown", e => {
     // console.log(e.keyCode);
     if (e.key === "Enter" || e.keyCode === 13) {
@@ -44,14 +56,22 @@ window.addEventListener("keydown", e => {
     }
 })
 
+window.addEventListener('load', e => {
+    state.note = new Note()
+    state.note.readPresistedData();
+    for (note of state.note.note) {
+        insertNote(note)
+    }
 
+})
 const addNote = () => {
+    if (!state.note) state.note = new Note()
     if (noteInput.value) {
         const newNote = {
             note: noteInput.value,
-            id: note.getNotesLength() + 1
+            id: state.note.getNotesLength() + 1
         }
-        note.addNote(newNote.note, newNote.id)
+        state.note.addNote(newNote.note, newNote.id)
         insertNote(newNote)
         // console.log(note.note.length);
         noteInput.value = ""
@@ -68,7 +88,7 @@ function deleteNoteFun(e) {
             const li = e.target.parentElement
             console.log(li);
             noteShowCase.removeChild(li)
-            note.deleteNote(id)
+            state.note.deleteNote(id)
         }
     }
 }
